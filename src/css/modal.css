@@ -1,0 +1,270 @@
+body.show-modal {
+  overflow: hidden;
+}
+
+body.show-modal .backdrop {
+  display: flex;
+}
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0000008b;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: auto;
+}
+
+.modal-icons {
+  filter: grayscale(100%);
+  align-items: center;
+}
+
+.modal-icons:hover {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+.dark.amazon-icon {
+  filter: brightness(0) invert(1);
+}
+
+.dark.appbooks-icon {
+  filter: grayscale(100%);
+}
+
+.dark.modal-icons:hover {
+  filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+}
+
+.dark.close-btn {
+  stroke: #fff;
+  background-color: #000;
+}
+
+.dark.modal-message {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark.modal-title {
+  color: #fff;
+}
+
+.dark.modal-description {
+  color: #fff;
+}
+
+.dark.modal-author {
+  color: #b4afaf;
+}
+
+@media (min-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+/*-------------------------Mobile--------------------------*/
+@media (min-width: 375px) {
+  .modal-w {
+    border: 2px solid #000;
+    border-radius: 18px;
+    width: 336px;
+    position: relative;
+    background: #fff;
+    margin: 70px 15px 30px;
+    padding: 40px 25px;
+  }
+
+  .modal-img {
+    width: 287px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  .modal-title {
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+    color: #111;
+    text-transform: uppercase;
+    margin-top: 14px;
+  }
+  .modal-author {
+    font-style: italic;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: -0.04em;
+    color: #b4afaf;
+    margin-top: 4px;
+  }
+  .modal-description {
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.04em;
+    color: #111;
+    margin-top: 18px;
+  }
+
+  .marketplace-list {
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6.5px;
+    padding: 0;
+    display: flex;
+    margin-top: 14px;
+  }
+
+  .modal-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    margin-top: 44px;
+  }
+  .modal-button-shopping-list {
+    border: 2px solid #4f2ee8;
+    border-radius: 40px;
+    padding: 14px 28px;
+    width: 279px;
+    height: 46px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.28;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #111;
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    display: flex;
+    background: #fff;
+  }
+
+  .modal-button-shopping-list:hover,
+  .modal-button-shopping-list:focus {
+    background: #4f2ee8;
+    color: #fff;
+  }
+
+  .modal-message {
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    text-align: center;
+    color: rgba(17, 17, 17, 0.5);
+    width: 242px;
+    margin-top: 8px;
+  }
+
+  .modal-content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .modal-close-btn {
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    display: inline-flex;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+}
+
+/*-------------------------Desktop-------------------------*/
+
+@media (min-width: 1440px) {
+  .modal-w {
+    border: 2px solid #000;
+    border-radius: 18px;
+    width: 579px;
+    height: 501px;
+    padding: 40px 40px 40px;
+    position: relative;
+    background: #fff;
+  }
+
+  .modal-close-btn {
+    top: 24px;
+    right: 24px;
+  }
+  .modal-content {
+    flex-direction: row;
+    width: 495px;
+    display: flex;
+    gap: 24px;
+  }
+  .modal-img {
+    border-radius: 8px;
+    width: 192px;
+    height: 281px;
+  }
+
+  .modal-description {
+    width: 279px;
+    height: 70px;
+  }
+
+  .modal-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .modal-button-shopping-list {
+    border: 2px solid #4f2ee8;
+    border-radius: 40px;
+    width: 499px;
+    height: 64px;
+    margin-top: 0px;
+  }
+  .modal-message {
+    width: 324px;
+    height: 18px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.amazon-icon {
+  width: 62px;
+  height: 30px;
+}
+
+.close-btn:hover {
+  stroke: #4f2ee8;
+}
+.close-btn {
+  stroke: #000;
+  background-color: #fff;
+}
+
+.dark.close-btn {
+  stroke: #fff;
+  background-color: #000;
+}
+
+.hidden {
+  display: none;
+}
